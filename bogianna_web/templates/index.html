@@ -1,0 +1,415 @@
+{% extends 'base-index.html' %}
+{% load static %}
+
+{% block page_content %}
+
+<!-- Full Screen Search Start -->
+<div class="modal fade" id="searchModal" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+            <div class="modal-header border-0">
+                <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center">
+                <div class="input-group" style="max-width: 600px;">
+                    <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Търсете по ключова дума">
+                    <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Full Screen Search End -->
+
+<!-- Facts Start -->
+<div class="container-fluid facts py-5 pt-lg-0">
+    <div class="container py-5 pt-lg-0">
+        <div class="row gx-0">
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+                <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                    <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                        <i class="fa fa-users text-primary"></i>
+                    </div>
+                    <div class="ps-4">
+                        <h5 class="text-white mb-0">Доволни клиенти</h5>
+                        <h1 class="text-white mb-0" data-toggle="counter-up">19</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+                <div class="bg-light shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                    <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                        <i class="fa fa-book text-white"></i>
+                    </div>
+                    <div class="ps-4">
+                        <h5 class="text-primary mb-0">Издадени книги</h5>
+                        <h1 class="mb-0" data-toggle="counter-up">32</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+                <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                    <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                        <i class="fa fa-award text-primary"></i>
+                    </div>
+                    <div class="ps-4">
+                        <h5 class="text-white mb-0">Признания и награди</h5>
+                        <h1 class="text-white mb-0" data-toggle="counter-up">4</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Facts End -->
+
+<!-- About Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-7">
+                <div class="section-title position-relative pb-3 mb-5">
+                    <h5 class="fw-bold text-primary text-uppercase">За Нас</h5>
+                    <h1 class="mb-0">Водеща издателска къща с над 10 години опит в дизайна и проектирането</h1>
+                </div>
+                <p class="mb-4">Ние предлагаме пълноценни решения за дизайн на уебсайтове, оформление на книги и проектни услуги. Нашата мисия е да помагаме на бизнеси и автори да постигнат успех с уникални и креативни продукти.</p>
+                <div class="row g-0 mb-3">
+                    <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                        <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Индивидуален подход</h5>
+                        <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Конкурентни цени</h5>
+                    </div>
+                    <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                        <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Поддръжка</h5>
+                        <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Професионален екип</h5>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                    <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                        <i class="fa fa-phone-alt text-white"></i>
+                    </div>
+                    <div class="ps-4">
+                        <h5 class="mb-2">Свържете се с нас за всякакви въпроси</h5>
+                        <h4 class="text-primary mb-0">0898 79 14 27</h4>
+                    </div>
+                </div>
+                <a href="{% url 'quote' %}" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Поискайте оферта</a>
+            </div>
+            <div class="col-lg-5" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{% static 'img/about.jpeg' %}" style="object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<!-- Features Start -->
+<!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-primary text-uppercase">Защо да изберете нас</h5>
+            <h1 class="mb-0">Ние ви помагаме да развивате бизнеса си с уникални решения</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <div class="row g-5">
+                    <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
+                        <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-cubes text-white"></i>
+                        </div>
+                        <h4>Иновации и креативност</h4>
+                        <p class="mb-0">Нашите услуги са съчетание от креативност и технологии, осигурявайки най-добрите решения за вашия проект.</p>
+                    </div>
+                    <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-award text-white"></i>
+                        </div>
+                        <h4>Наградени проекти</h4>
+                        <p class="mb-0">Нашите проекти са високо оценени и награждавани, което доказва качеството на нашата работа.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100 rounded" src="{% static 'img/feature.jpg' %}" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="row g-5">
+                    <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
+                        <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-users-cog text-white"></i>
+                        </div>
+                        <h4>Професионален екип</h4>
+                        <p class="mb-0">Нашите специалисти работят неуморно, за да осигурят качествено изпълнение на всеки проект.</p>
+                    </div>
+                    <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
+                        <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <h4>24/7 Поддръжка</h4>
+                        <p class="mb-0">Ние сме на разположение, за да осигурим непрекъсната поддръжка за вашите нужди.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- Features End -->
+
+<!-- Services Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-primary text-uppercase">Нашите услуги</h5>
+            <h1 class="mb-0">Ние предлагаме индивидуални решения за вашия успех</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                    <div class="service-icon">
+                        <i class="fa fa-book text-white"></i>
+                    </div>
+                    <h4 class="mb-3">Предпечат <br>и печат на книги</h4>
+                    <p class="m-0">Създаваме уникални оформления и дизайн на книги, които отразяват визията на вашето произведение и талант.</p>
+                    <a class="btn btn-lg btn-primary rounded" href="">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                    <div class="service-icon">
+                        <i class="fa fa-laptop-code text-white"></i>
+                    </div>
+                    <h4 class="mb-3">Уеб дизайн <br>и разработка</h4>
+                    <p class="m-0">Предлагаме професионални уеб решения, които подобряват вашето онлайн присъствие и привличат повече клиенти.</p>
+                    <a class="btn btn-lg btn-primary rounded" href="">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+                <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                    <div class="service-icon">
+                        <i class="fa fa-drafting-compass text-white"></i>
+                    </div>
+                    <h4 class="mb-3">Проектиране <br>и консултации</h4>
+                    <p class="m-0">Нашият екип от експерти предлага консултации и проектиране, за да гарантира успеха на вашите проекти.</p>
+                    <a class="btn btn-lg btn-primary rounded" href="">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services End -->
+
+<!-- Testimonials Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-primary text-uppercase">Отзиви</h5>
+            <h1 class="mb-0">Какво казват нашите клиенти</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+            <div class="testimonial-item bg-light my-4">
+                <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                    <img class="img-fluid rounded" src="{% static 'img/testimonial-1.jpg' %}" style="width: 60px; height: 60px;">
+                    <div class="ps-4">
+                        <h4 class="text-primary mb-1">Петя Атанасова</h4>
+                        <small class="text-uppercase">Автор</small>
+                    </div>
+                </div>
+                <div class="pt-4 pb-5 px-5">
+                    "Изключителен екип с внимание към детайлите. Доволна съм от всяка стъпка на съвместната ни работа."
+                </div>
+            </div>
+            <div class="testimonial-item bg-light my-4">
+                <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                    <img class="img-fluid rounded" src="{% static 'img/testimonial-2.jpg' %}" style="width: 60px; height: 60px;">
+                    <div class="ps-4">
+                        <h4 class="text-primary mb-1">Иван Георгиев</h4>
+                        <small class="text-uppercase">Предприемач</small>
+                    </div>
+                </div>
+                <div class="pt-4 pb-5 px-5">
+                    "Страхотен проект с високо качество, направен според моите индивидуални изисквания."
+                </div>
+            </div>
+            <div class="testimonial-item bg-light my-4">
+                <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                    <img class="img-fluid rounded" src="{% static 'img/testimonial-4.jpg' %}" style="width: 60px; height: 60px;">
+                    <div class="ps-4">
+                        <h4 class="text-primary mb-1">Мария Петрова</h4>
+                        <small class="text-uppercase">Бизнес консултант</small>
+                    </div>
+                </div>
+                <div class="pt-4 pb-5 px-5">
+                    "Те направиха изключителен дизайн на нашия уебсайт. Бързи, професионални и с чудесен вкус."
+                </div>
+            </div>
+            <div class="testimonial-item bg-light my-4">
+                <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                    <img class="img-fluid rounded" src="{% static 'img/testimonial-3.jpg' %}" style="width: 60px; height: 60px;">
+                    <div class="ps-4">
+                        <h4 class="text-primary mb-1">Иван Петров</h4>
+                        <small class="text-uppercase">Автор</small>
+                    </div>
+                </div>
+                <div class="pt-4 pb-5 px-5">
+                    "Изключителен дизайн на желаната от нас брошура. Отговори на всичките ми очаквания."
+                </div>
+            </div>
+            <div class="testimonial-item bg-light my-4">
+                <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                    <img class="img-fluid rounded" src="{% static 'img/testimonial-5.jpg' %}" style="width: 60px; height: 60px;">
+                    <div class="ps-4">
+                        <h4 class="text-primary mb-1">Александър Георгиев</h4>
+                        <small class="text-uppercase">Предприемач</small>
+                    </div>
+                </div>
+                <div class="pt-4 pb-5 px-5">
+                    "Изключителен дизайн на желаната от нас брошура. Отговори на всичките ми очаквания."
+                </div>
+            </div>
+            
+            <!-- Можете да добавите още отзиви тук -->
+
+            
+        </div>
+    </div>
+</div>
+<!-- Testimonials End -->
+
+<!-- Team Start -->
+<!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-primary text-uppercase">Екип</h5>
+            <h1 class="mb-0">Нашият професионален екип е тук, за да ви помогне</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                <div class="team-item bg-light rounded overflow-hidden">
+                    <div class="team-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="{% static 'img/team-1.jpg' %}" alt="">
+                        <div class="team-social">
+                            <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <h4 class="text-primary">Петър Георгиев</h4>
+                        <p class="text-uppercase m-0">Ръководител Проекти</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                <div class="team-item bg-light rounded overflow-hidden">
+                    <div class="team-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="{% static 'img/team-2.jpg' %}" alt="">
+                        <div class="team-social">
+                            <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <h4 class="text-primary">Елена Николова</h4>
+                        <p class="text-uppercase m-0">Графичен Дизайнер</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                <div class="team-item bg-light rounded overflow-hidden">
+                    <div class="team-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="{% static 'img/team-3.jpg' %}" alt="">
+                        <div class="team-social">
+                            <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <h4 class="text-primary">Мартин Костов</h4>
+                        <p class="text-uppercase m-0">Уеб Дизайнер</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- Team End -->
+
+<!-- Blog Start -->
+<!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-primary text-uppercase">Последни новини</h5>
+            <h1 class="mb-0">Прочетете най-новите статии в нашия блог</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                <div class="blog-item bg-light rounded overflow-hidden">
+                    <div class="blog-img position-relative overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/blog-1.jpg' %}" alt="">
+                        <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Дизайн на книги</a>
+                    </div>
+                    <div class="p-4">
+                        <div class="d-flex mb-3">
+                            <small class="me-3"><i class="far fa-user text-primary me-2"></i>Автор: Иван Иванов</small>
+                            <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Септември, 2024</small>
+                        </div>
+                        <h4 class="mb-3">Как да създадете уникален дизайн за вашата книга</h4>
+                        <p>Научете основните принципи и техники за създаване на запомнящи се и професионални дизайни на книги.</p>
+                        <a class="text-uppercase" href="">Прочетете повече <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                <div class="blog-item bg-light rounded overflow-hidden">
+                    <div class="blog-img position-relative overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/blog-2.jpg' %}" alt="">
+                        <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Уеб дизайн</a>
+                    </div>
+                    <div class="p-4">
+                        <div class="d-flex mb-3">
+                            <small class="me-3"><i class="far fa-user text-primary me-2"></i>Автор: Мария Петрова</small>
+                            <small><i class="far fa-calendar-alt text-primary ме-2"></i>15 Август, 2024</small>
+                        </div>
+                        <h4 class="mb-3">Тенденции в уеб дизайна за 2024 година</h4>
+                        <p>Разгледайте най-новите тенденции в уеб дизайна, които ще доминират през следващата година.</p>
+                        <a class="text-uppercase" href="">Прочетете повече <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                <div class="blog-item bg-light rounded overflow-hidden">
+                    <div class="blog-img position-relative overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/blog-3.jpg' %}" alt="">
+                        <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Проектиране</a>
+                    </div>
+                    <div class="p-4">
+                        <div class="d-flex mb-3">
+                            <small class="me-3"><i class="far fa-user text-primary me-2"></i>Автор: Мартин Костов</small>
+                            <small><i class="far fa-calendar-alt text-primary me-2"></i>05 Август, 2024</small>
+                        </div>
+                        <h4 class="mb-3">Как да подходите към проектирането на сложни проекти</h4>
+                        <p>Открийте как правилното планиране и консултации могат да подобрят ефективността на вашите проекти.</p>
+                        <a class="text-uppercase" href="">Прочетете повече <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- Blog End -->
+
+{% endblock %}

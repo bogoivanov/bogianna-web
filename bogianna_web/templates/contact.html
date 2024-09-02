@@ -1,0 +1,105 @@
+{% extends 'base-contacts.html' %}
+{% load static %}
+
+{% block page_content %}
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Свържете се с нас</h5>
+                <h1 class="mb-0">Препоръчваме ви да се свържете с нас по телефон</h1>
+            </div>
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.1s">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2">Обадете ни се на този номер</h5>
+                            <h4 class="text-primary mb-0">0898 79 14 27</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.4s">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                            <i class="fa fa-envelope-open text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2">Изпратете ни имейл</h5>
+                            <h4 class="text-primary mb-0">bogianna@abv.bg</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.8s">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                            <i class="fa fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2">Посетете нашия офис</h5>
+                            <h4 class="text-primary mb-0">ж.к. Илинден, София</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+                    <form method="POST" action="{% url 'contact' %}">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" name="name" class="form-control border-0 bg-light px-4" placeholder="Вашето име" style="height: 55px;" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="email" class="form-control border-0 bg-light px-4" placeholder="Вашият имейл" style="height: 55px;" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" name="subject" class="form-control border-0 bg-light px-4" placeholder="Тема" style="height: 55px;" required>
+                            </div>
+                            <div class="col-12">
+                                <textarea name="message" class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Вашето съобщение" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Изпратете съобщение</button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
+                    <iframe class="position-relative rounded w-100 h-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227.38821503143834!2d23.29326455639289!3d42.7048230970927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa854d201e55cf%3A0x27025d25153071ad!2z0LYu0LouINCY0LvQuNC90LTQtdC9LCDRg9C7LiDigJ7QkNGC0LDQvdCw0YEg0KXRgNCw0L3QvtCy4oCcIDEyN9CRINCQLCAxMzA5INCh0L7RhNC40Y8!5e1!3m2!1sbg!2sbg!4v1724684100481!5m2!1sbg!2sbg"
+                        frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+   
+{% endblock %}
